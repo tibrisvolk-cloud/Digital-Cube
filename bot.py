@@ -1271,8 +1271,7 @@ def main():
             listen="0.0.0.0",
             port=PORT,
             webhook_url=f"https://{os.getenv('RENDER_EXTERNAL_HOSTNAME')}/webhook",
-            drop_pending_updates=True,
-            health_endpoint="/health"
+            drop_pending_updates=True
         )
     else:
         print("Бот запущен локально...")
