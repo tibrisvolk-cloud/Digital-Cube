@@ -13,7 +13,7 @@ from telegram.ext import (
 import sqlite3
 
 # ---------- НАСТРОЙКИ ----------
-TOKEN = os.getenv("BOT_TOKEN", "ВАШ_ТОКЕН_БОТА")  # Берём из переменной окружения, иначе запасной
+TOKEN = os.getenv("BOT_TOKEN", "ВАШ_ТОКЕН_БОТА")  
 ADMIN_ID = int(os.getenv("ADMIN_ID", "0"))
 DB_NAME = "bot_data.db"
 # --------------------------------
@@ -1272,7 +1272,6 @@ def main():
             port=PORT,
             webhook_url=f"https://{os.getenv('RENDER_EXTERNAL_HOSTNAME')}/webhook",
             drop_pending_updates=True,
-            health_endpoint="/health"
         )
     else:
         print("Бот запущен локально...")
